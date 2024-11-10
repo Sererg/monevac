@@ -1,0 +1,39 @@
+:root {
+  --color-dark: #262633;
+  --color-dark-alt: #797986;
+  --color-dark-border: #494950;
+  --color-dark-footer: #222225;
+  --color-dark-footer-alt: #2A2A2E;
+  --color-light: #FFFFFF;
+  --color-red: #BF2738;
+  --color-red-hover: #CC2A3C;
+  --color-red-link:#F23147;
+  --color-gray: #F5F5F5;
+  --color-gray-alt: #EAEAEA;
+
+
+  --border: 2px solid var(--color-dark);
+  --border-radius: 14px;
+  --border-radius-large: 30px;
+
+  --font-family-h: 'RoadRadio', sans-serif;
+  --font-family-base: 'Golos', sans-serif;
+
+  --container-width: 1290px;
+  --container-padding-x: 15px;
+
+  --section-padding-y: 50px;
+
+  --input-height: 52px;
+  --button-height: 52px;
+
+  --transition-duration: 0.2s;
+
+  @include desktop {
+    --section-padding-y: 50px;
+  }
+
+  @include mobile {
+    --section-padding-y: 30px;
+  }
+}
