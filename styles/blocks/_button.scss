@@ -8,23 +8,14 @@
   background-color: var(--color-red);
   border-radius: var(--border-radius);
   font-family: var(--font-family-h);
+  border-width: 0;
 
   @include hover {
     color: var(--color-dark);
-    background-color: var(--color-light);
+    background-color: var(--color-red-hover);
   }
 
   &--transparent {
     background-color: transparent;
-  }
-
-  &--accent {
-    color: var(--color-dark);
-    background-color: var(--color-accent);
-
-    @include hover {
-      color: var(--color-accent);
-      background-color: var(--color-dark);
-    }
   }
 }

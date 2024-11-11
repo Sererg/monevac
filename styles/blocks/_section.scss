@@ -8,20 +8,31 @@
   &__header {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
     column-gap: 40px;
+    background-color: var(--color-gray);
+    &-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      column-gap: 14px;
+      font-size: 12px;
+      color: var(--color-dark-alt)
+    }
+
+    &-line {
+       width: 100%; 
+       border-top: 
+       1px solid #C9C9CF;
+    }
+
 
     @include mobile {
       flex-direction: column;
       row-gap: 30px;
       text-align: center;
-    }
-
-    &:not(:last-child) {
-      margin-bottom: 80px;
-
-      @include mobile {
-        margin-bottom: 40px;
-      }
     }
   }
 

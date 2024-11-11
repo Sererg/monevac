@@ -1,4 +1,9 @@
 .header {
+  padding-top: 13px;
+
+  @include mobile {
+    padding-top: 10px;
+  }
 
   &__inner {
     display: flex;
@@ -7,17 +12,24 @@
     column-gap: 59px;
 
     @include tablet {
-      column-gap: 59px;
+      column-gap: 48px;
+    }
+
+    @include mobile {
+      column-gap:normal
     }
   }
 
   &__logo {
     @include tablet {
-      max-width: 120px;
+      max-width: 90px;
     }
 
     @include mobile {
-      max-width: 144px;
+      max-width: 67px;
+    }
+    &-mobile {
+      margin: auto;
     }
   }
 
@@ -25,12 +37,8 @@
     margin-right: auto;
     font-size: 15px;
 
-    @include desktop {
-      font-size: 18px;
-    }
-
     @include tablet {
-      font-size: 16px;
+      font-size: 14px;
     }
 
     &-list {
@@ -66,6 +74,41 @@
         background-color: currentColor;
         transition-duration: inherit;
       }
+    }
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+
+      &-number {
+        font-weight: 500;
+        font-size: 15px;
+      }
+
+      &-mail {
+        color: var(--color-dark-alt);
+        font-size: 13px;
+      }
+  }
+
+  &__icons {
+    display: flex;
+    margin-left: auto;
+    @include mobile {
+      margin: 0;
+    }
+    &-search {
+      margin-left: 23px;
+      @include tablet {
+        margin-left: 28px;
+      }
+    }
+  }
+
+  &__button {
+    @include hover {
+      border-color: var(--color-red);
+      background-color: dotted;
     }
   }
 }

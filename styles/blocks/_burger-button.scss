@@ -1,12 +1,29 @@
 .burger-button {
   @include reset-button;
-  @include square(48px);
+  @include square(32px);
 
   position: relative;
-  border-radius: var(--border-radius-small);
+
+  @include tablet {
+    @include square(23px);
+  }
 
   @include hover {
-    background-color: var(--color-accent);
+    background-color: var(--color-red);
+    border-radius: 3px;
+  }
+
+  &::before {
+    @include abs-center;
+
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-dark);
+    border-radius: 5px;
+    top: 40%;
+
+ 
   }
 
   &::after {
@@ -17,6 +34,13 @@
     height: 2px;
     background-color: var(--color-dark);
     border-radius: 5px;
-    box-shadow: 0 -8px, 0 8px;
+    box-shadow: 0 12px;
+    top: 40%;
+    @include tablet {
+      box-shadow: 0 8px;
+    }
+    translate: -100% -50%;
+
+   
   }
 }

@@ -24,12 +24,12 @@
                     <li class="header_menu-item">
                         <a class="header__menu-link" href="/">Оборудование</a>
                     </li>
-                    <li class="header_menu-item">
+                    <li class="header_menu-item hidden-tablet">
                         <a class="header__menu-link" href="/">Сервис и запчасти</a>
                     </li>
                 </ul>
             </nav>
-            <a class="header__logo logo" href="/">
+            <a class="header__logo logo hidden-tablet" href="/">
                 <img 
                 class="logo__image"
                 src=".//images/logo.svg" 
@@ -38,36 +38,130 @@
                 height="64"
                 loading="lazy">
             </a>
-            <a class="header__comparison comparison" href="/">
+            <a class="header__logo-mobile logo visible-mobile" href="/">
                 <img 
-                class="comparison__image"
-                src=".//images/comparison.svg" 
+                class="logo__image"
+                src=".//images/logo.svg" 
                 alt="monevac" 
-                width="18"
-                height="18.59"
+                width="67"
+                height="40"
                 loading="lazy">
             </a>
-            <a class="header__search search" href="/">
+            <a class="header__logo-tablet logo visible-tablet hidden-mobile" href="/">
                 <img 
-                class="search__image"
-                src=".//images/search.svg" 
+                class="logo__image"
+                src=".//images/logo-tablet.svg" 
                 alt="monevac" 
-                width="12"
-                height="16"
+                width="90"
+                height="30"
                 loading="lazy">
             </a>
-            <div class="header__contacts">
+            <nav class="header__icons">
+                <a class="header__icons-comparison comparison" href="/">
+                    <img 
+                    class="comparison__image"
+                    src=".//images/comparison.svg" 
+                    alt="monevac" 
+                    width="18"
+                    height="18.59"
+                    loading="lazy">
+                </a>
+                <a class="header__icons-search search" href="/">
+                    <img 
+                    class="search__image"
+                    src=".//images/search.svg" 
+                    alt="monevac" 
+                    width="12"
+                    height="16"
+                    loading="lazy">
+                </a>
+            </nav>
+            <div class="header__contacts hidden-mobile">
                 <a class="header__contacts-number">+7 (499) 136-17-18</a>
                 <a class="header__contacts-mail">info@monevac.ru</a>
             </div>
             <button
-            class="header__button button hidden-mobile"
+            class="header__button button hidden-tablet"
             type="button"
             >
             ОСТАВИТЬ ЗАЯВКУ
             </button>
         </div>
     </header>
+
+    <main class="content">
+        <section class="section container">
+            <div class="section__header">
+                <div class="section__header-menu">
+                    <ul class="section__header-list">
+                        <li class="section__header-item">
+                            <a class="section__header-link" href="/">Главная</a>
+                        </li>
+                        <a>·</a>
+                        <li class="section__header-item">
+                            <a class="section__header-link" href="/">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="section__header-line"></div>
+                <div class="section__header-title">
+                    <h1>Контакты</h1>
+                </div>
+                    
+            </div>
+            <div class="section__body">
+                <div  class="hero">
+                    <div class="hero__main">
+                        <div class="hero__body">
+                            <div class="hero__title">
+                                <h2 class="hero__title-number">8 (903) 467 98 51</h2>
+                                <p class="hero__title-mail">info@monevac.ru</p>
+                            </div>
+                            <div class="hero__description">
+                                <h2 class="visually-hidden">Реквизиты организации</h2>
+                                <div class="hero__description-header">
+                                  <p>
+                                    Полное наименование:<br>
+                                    Общество с ограниченной ответственностью «МОНЕВАК»<br>
+                                    Сокращенное наименование: ООО «МОНЕВАК»<br>
+                                  </p>  
+                                </div>
+                                <ul class="hero__description-list">
+                                    <li class="hero__description-item">
+                                        <p>
+                                            ИНН: 3448050610<br>
+                                            КПП: 344801001<br>
+                                            ОКПО: 67354285<br>
+                                            ОКАТО: 18401000000<br>
+                                            ОГРН: 1103461002480<br>
+                                            Код по ОКВЭД: 51.70<br>
+                                        </p>
+                                    </li>
+                                    <li class="hero__description-item">
+                                        <p>
+                                            Банк: Филиала «Ростовский» ОАО «Альфа-Банк» г Ростов на Дону<br>
+                                            БИК: 046015207<br>
+                                            к/с: 30101810500000000207<br>
+                                            р/с: 40702810926090000003<br>
+                                        </p>
+                                    </li>
+                                    <li class="hero__description-item">
+                                        <p>
+                                            Юридический адрес: 400080, Волгоградская обл. г. Волгоград<br>                              
+                                            ул. Командира Рудь,14А, офис 13<br> 
+                                            Почтовый адрес: 400080, Волгоградская обл. г. Волгоград<br>                                     
+                                            ул. Командира Рудь, 14А, офис 13<br> 
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <dialog class="overlay" id="overlay">
         <form class="overlay__close-button-wrapper" method="dialog">
