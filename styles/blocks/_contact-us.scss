@@ -19,9 +19,11 @@
 
   &__body {
     row-gap: 30px;
+    margin-top: 20px;
 
     @include tablet {
       row-gap: 12px;
+      margin-top: 10px;
     }
     @include mobile {
       row-gap: 10px;
@@ -39,4 +41,46 @@
       }
     }
   }
+
+  &__checkbox{
+    display: inline-block;
+    position: relative;
+    input {
+      display: none;
+    }
+    input:checked + .contact-us__checkbox-icon {
+      background-color:var(--color-red); 
+      &::after {
+          content: "\2713";
+          font-size: 16px;
+          color:var(--color-light);
+          text-align: center;
+          line-height: 18px;
+          display: block;
+      }
+  }
+
+    margin-top: 20px;
+    font-size: 13px;
+    &-icon{
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-color: var(--color-gray); 
+      border: none; 
+      margin-right: 16px;
+      vertical-align: middle;
+      border-radius: 4px;
+      cursor: pointer;
+      &:hover {
+        background-color:var(--color-red);
+      }
+    }
+    
+  }
+
+  &__button{
+    margin-top: 30px;
+  }
 }
+

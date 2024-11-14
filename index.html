@@ -185,12 +185,13 @@
                                         ></textarea>
                                     </div>
                                 </div>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" class="checkbox" id="agree" name="agree">
-                                    Я подтверждаю свое согласие с политикой в отношении обработки персональных данных
+                                <label class="contact-us__checkbox">
+                                    <input type="checkbox"  id="agree" name="agree">
+                                    <span class="contact-us__checkbox-icon"></span>
+                                   <span style="color: var(--color-gray-text);">Я подтверждаю свое согласие с политикой в отношении</span> обработки персональных данных
                                 </label>
                                 <button
-                                class="button"
+                                class="contact-us__button button"
                                 type="button"
                                 >
                                     Задать вопрос
@@ -405,12 +406,6 @@
                             </li>
                         </ul>
                     </nav>
-
-                <div class="footer__left-extra">
-                    <p class="footer__copyright">
-                        © Моневак <time datetime="2020">2020</time> | Все права защищены
-                    </p>
-                </div>
             </div>
             <div class="footer__right">
                 <div class="footer__right-body grid grid--2">
@@ -424,10 +419,19 @@
                     <button class="footer__right-button button">Обратный звонок</button>
                 </div>
                 <span class="footer_right-address">Москва ул. Дербеневская, д. 1, стр. 1, подъезд 44, офис 6 (станция метро "Павелецкая")</span>
-                <p class="footer__right-extra">Разработка и продвижение сайта - TODO</p>
             </div>
         </div>
-        <div class="footer__line"></div>
+        <div class="footer__extra">
+            <div class="footer__line"></div>
+            <div class="footer__extra-body">
+                <p class="footer__copyright">
+                    © Моневак <time datetime="2020">2020</time> | Все права защищены
+                </p>
+                <p class="footer__right-extra">Разработка и продвижение сайта - <span style="color: var(--color-red);">TODO</span></p>
+            </div>
+            
+        </div>
+        
     </footer>
 
     <dialog class="overlay" id="overlay">
