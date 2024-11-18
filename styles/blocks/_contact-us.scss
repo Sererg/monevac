@@ -1,78 +1,86 @@
 .contact-us {
-  position: relative;
-  overflow-x: hidden;
-
-  @include mobile-above {
-    padding: 60px 100px 80px;
-    background-color: var(--color-gray);
-    border-radius: var(--border-radius-large);
-  }
-
-  &::after {
-    --contactUsImageOffsetY: 62px;
-
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    translate: -50% -50%;
-    height: calc(100% - var(--contactUsImageOffsetY) * 2);
-    aspect-ratio: 1;
-    background:
-      url('../../images/contact-us-bg.svg')
-      center/contain no-repeat;
-
-    @include tablet {
-      display: none;
-    }
-  }
-
-  &__form,
-  &__body {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__request-types,
-  &__body {
-    @include mobile {
-      background-color: var(--color-gray);
-    }
-  }
-
-  &__request-types {
-    @include mobile {
-      padding: 40px 52px 36px;
-      border-radius:
-        var(--border-radius-large)
-        var(--border-radius-large)
-        0
-        0;
-    }
-  }
 
   &__form {
-    @include tablet-above {
-      max-width: 556px;
+    display: flex;
+    flex-direction: column;
+    max-width: 630px;
+  }
+ 
+
+  &__form {
+    @include tablet {
+      max-width: 350px;
     }
 
-    @include mobile-above {
-      row-gap: 40px;
+    @include mobile {
+      max-width: 100%;
     }
   }
 
   &__body {
-    row-gap: 25px;
+    row-gap: 30px;
+    margin-top: 20px;
 
+    @include tablet {
+      row-gap: 12px;
+      margin-top: 10px;
+    }
     @include mobile {
-      row-gap: 20px;
-      margin-bottom: 30px;
-      padding: 10px 30px 50px;
-      border-radius:
-        0
-        0
-        var(--border-radius-large)
-        var(--border-radius-large);
+      row-gap: 10px;
     }
   }
+
+  &__field {
+    &-large {
+      grid-column: 1 / 3;
+      grid-row: 2;
+
+      @include tablet {
+        grid-column: unset;
+        grid-row: unset;
+      }
+    }
+  }
+
+  &__checkbox{
+    display: inline-block;
+    position: relative;
+    input {
+      display: none;
+    }
+    input:checked + .contact-us__checkbox-icon {
+      background-color:var(--color-red); 
+      &::after {
+          content: "\2713";
+          font-size: 16px;
+          color:var(--color-light);
+          text-align: center;
+          line-height: 18px;
+          display: block;
+      }
+  }
+
+    margin-top: 20px;
+    font-size: 13px;
+    &-icon{
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-color: var(--color-gray); 
+      border: none; 
+      margin-right: 16px;
+      vertical-align: middle;
+      border-radius: 4px;
+      cursor: pointer;
+      &:hover {
+        background-color:var(--color-red);
+      }
+    }
+    
+  }
+
+  &__button{
+    margin-top: 30px;
+  }
 }
+

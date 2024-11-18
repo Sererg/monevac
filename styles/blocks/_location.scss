@@ -1,0 +1,46 @@
+.location {
+    padding-top: 81px;
+    padding-bottom: 100px;
+  @include tablet{
+    padding-top: 59px;
+    padding-bottom: 80px;
+  }
+  @include mobile {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+
+  &__list {
+    &:not(:last-child) {
+      margin-bottom: 100px;
+
+      @include mobile {
+        margin-bottom: 70px;
+      }
+    }
+  }
+  &__item {
+    &-large {
+      grid-column: 3 / 5;
+      grid-row: 2 / 2;
+
+      @include tablet {
+        grid-column: unset;
+        grid-row: unset;
+
+
+        grid-column: 1 / 3; /* Занимает всю ширину четвертой строки */
+        grid-row: 4 / 5;
+      }
+
+      @include mobile {
+        grid-column: unset;
+        grid-row: unset;
+        
+      }
+    }
+    
+  
+   
+  }
+}

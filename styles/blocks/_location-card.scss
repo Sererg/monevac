@@ -1,0 +1,62 @@
+.location-card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-content: flex-start;
+  column-gap: 15px;
+  min-height: 310px;
+  padding: 33px 16px 40px 22px;
+  background-color: var(--color-gray);
+  border-radius: 20px;
+
+  @include mobile {
+    padding: 33px 16px 40px 12px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 10px;
+    margin-bottom: auto;
+    margin-top: 15px;
+
+    @include mobile {
+      display: contents;
+    }
+    &-phone {
+      font-size: 19px;
+      line-height: 28.5px;
+
+      br {
+        display: none;
+        @include mobile {
+          display: block;
+        }
+      }
+    }
+    &-address {
+      color: var(--color-gray-text);
+      font-size: 14px;
+      line-height: 19.5px;
+  
+    }
+    &-link {
+      color: var(--color-red);
+      font-size: 14px;
+    }
+    &-footer {
+      font-size: 14px;
+    }
+  }
+
+  &__large {
+    @include mobile {
+      min-height: 380px;
+    }
+    
+  }
+}
+
+
+

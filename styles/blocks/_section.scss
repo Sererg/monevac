@@ -1,5 +1,5 @@
 .section {
-  padding-block: var(--section-padding-y);
+  // padding-block: var(--section-padding-y);
 
   &--hidden-x {
     overflow-x: hidden;
@@ -7,20 +7,51 @@
 
   &__header {
     display: flex;
+    flex-direction: column;
+    background-color: var(--color-gray);
     align-items: center;
-    column-gap: 40px;
+    justify-content: space-evenly;
 
-    @include mobile {
-      flex-direction: column;
-      row-gap: 30px;
-      text-align: center;
+    &-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      column-gap: 14px;
+      font-size: 12px;
+      color: var(--color-dark-alt)
     }
 
-    &:not(:last-child) {
-      margin-bottom: 80px;
+    &-line {
+       width: 100%; 
+       border-top: 
+       1px solid #C9C9CF;
+    }
 
+    &-menu{
+      margin-top: 21px;
+      margin-bottom: 25px;
+      @include tablet {
+        margin-top: 16px;
+        margin-bottom: 18px;
+      }
       @include mobile {
-        margin-bottom: 40px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+    }
+
+    &-title{
+      margin-top: 24px;
+      margin-bottom: 30px;
+
+      @include tablet {
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      @include mobile {
+        margin-top: 20px;
+        margin-bottom: 20px;
       }
     }
   }
