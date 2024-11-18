@@ -3,9 +3,14 @@
   flex-direction: row;
   justify-content: space-between;
   padding-top: 62px;
-  row-gap: var(--section-padding-y);
+  padding-bottom: 66px;
+  @include tablet{
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
   @include mobile {
     flex-direction:column;
+    padding-top: 30px;
   }
 
   &__body {

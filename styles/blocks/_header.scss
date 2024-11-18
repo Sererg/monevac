@@ -1,8 +1,13 @@
 .header {
   padding-top: 13px;
-
+  padding-bottom: 15px;
+  @include tablet {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
   @include mobile {
     padding-top: 10px;
+    padding-bottom: 15px;
   }
 
   &__inner {
