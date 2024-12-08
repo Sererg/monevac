@@ -9,7 +9,7 @@ export default {
   module: {
     rules: [
       {
-        test: /\.(png|jpg|gif|ico)$/i,
+        test: /\.(png|jpg|gif|ico|svg)$/i,
         type: 'asset/resource',
     },
       {
