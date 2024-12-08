@@ -2,7 +2,7 @@ import iconMap from "./images/mapPoint.svg"
 ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
             center: [53.195878, 50.100202],
-            zoom: 5
+            zoom: 5,
         }, {
             searchControlProvider: 'yandex#search'
         }),

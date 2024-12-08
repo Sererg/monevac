@@ -6,6 +6,9 @@ export default {
     filename: 'bundle.js',
     path: path.resolve(process.cwd(), 'dist'),
   },
+  resolve: {
+    modules: ['node_modules'],
+  },
   module: {
     rules: [
       {
