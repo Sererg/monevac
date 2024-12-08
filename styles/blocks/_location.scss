@@ -1,11 +1,12 @@
+@use '../media';
 .location {
     padding-top: 81px;
     padding-bottom: 100px;
-  @include tablet{
+  @include media.tablet{
     padding-top: 59px;
     padding-bottom: 80px;
   }
-  @include mobile {
+  @include media.mobile {
     padding-top: 30px;
     padding-bottom: 60px;
   }
@@ -14,7 +15,7 @@
     &:not(:last-child) {
       margin-bottom: 100px;
 
-      @include mobile {
+      @include media.mobile {
         margin-bottom: 70px;
       }
     }
@@ -24,7 +25,7 @@
       grid-column: 3 / 5;
       grid-row: 2 / 2;
 
-      @include tablet {
+      @include media.tablet {
         grid-column: unset;
         grid-row: unset;
 
@@ -33,14 +34,11 @@
         grid-row: 4 / 5;
       }
 
-      @include mobile {
+      @include media.mobile {
         grid-column: unset;
         grid-row: unset;
         
       }
     }
-    
-  
-   
   }
 }

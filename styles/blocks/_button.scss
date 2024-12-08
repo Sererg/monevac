@@ -1,5 +1,7 @@
+@use '../mixins';
+@use '../media';
 .button {
-  @include flex-center(true);
+  @include mixins.flex-center(true);
 
   height: var(--button-height);
   font-size: 14px;
@@ -10,7 +12,7 @@
   border-width: 0;
   width: 190px;
   line-height: 14px;
-  @include hover {
+  @include media.hover {
     color: var(--color-dark);
     background-color: var(--color-red-hover);
   }

@@ -1,14 +1,17 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-module.exports = {
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+export default {
   entry: './index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(process.cwd(), 'dist'),
   },
   module: {
     rules: [
+      {
+        test: /\.(png|jpg|gif|ico)$/i,
+        type: 'asset/resource',
+    },
       {
         test: /\.(sass|scss)$/,
         use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader',
@@ -40,7 +43,7 @@ module.exports = {
   ],
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(process.cwd(), 'dist'),
     },
     open: true,
     port: 8080,

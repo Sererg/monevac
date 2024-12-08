@@ -1,2 +1,2 @@
-import './styles/styles.css';
-
+// import './css/styles.css';
+import '../monevac/styles/styles.scss'

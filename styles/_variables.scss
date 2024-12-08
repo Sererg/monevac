@@ -1,3 +1,4 @@
+@use "./media";
 :root {
   --color-dark: #262633;
   --color-dark-alt: #797986;
@@ -30,11 +31,11 @@
 
   --transition-duration: 0.2s;
 
-  @include desktop {
+  @include media.desktop{
     --section-padding-y: 50px;
   }
 
-  @include mobile {
+  @include media.mobile {
     --section-padding-y: 30px;
   }
 }

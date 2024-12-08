@@ -1,11 +1,12 @@
+@use '../media';
 .header {
   padding-top: 13px;
   padding-bottom: 15px;
-  @include tablet {
+  @include media.tablet {
     padding-top: 14px;
     padding-bottom: 14px;
   }
-  @include mobile {
+  @include media.mobile {
     padding-top: 10px;
     padding-bottom: 15px;
   }
@@ -16,22 +17,22 @@
     align-items: center;
     column-gap: 59px;
 
-    @include tablet {
+    @include media.tablet {
       column-gap: 48px;
     }
 
-    @include mobile {
+    @include media.mobile {
       column-gap:normal;
       margin-left: 30px;
     }
   }
 
   &__logo {
-    @include tablet {
+    @include media.tablet {
       max-width: 90px;
     }
 
-    @include mobile {
+    @include media.mobile {
       max-width: 67px;
     }
     &-mobile {
@@ -43,7 +44,7 @@
     margin-right: auto;
     font-size: 15px;
 
-    @include tablet {
+    @include media.tablet {
       font-size: 14px;
     }
 
@@ -52,7 +53,7 @@
       align-items: center;
       column-gap: 46px;
 
-      @include tablet {
+      @include media.tablet {
         column-gap: 20px;
       }
     }
@@ -63,7 +64,7 @@
       align-items: center;
       height: 48px;
 
-      @include hover {
+      @include media.hover {
         &::after {
           width: 100%;
         }
@@ -101,25 +102,25 @@
   &__icons {
     display: flex;
     margin-left: auto;
-    @include desktop {
+    @include media.desktop {
       margin-left: 0;
     }
-    @include tablet {
+    @include media.tablet {
       margin-left: auto;
     }
-    @include mobile {
+    @include media.mobile {
       margin: 0;
     }
     &-search {
       margin-left: 23px;
-      @include tablet {
+      @include media.tablet {
         margin-left: 28px;
       }
     }
   }
 
   &__button {
-    @include hover {
+    @include media.hover {
       border-color: var(--color-red);
       background-color: dotted;
     }

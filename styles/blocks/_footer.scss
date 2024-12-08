@@ -1,16 +1,17 @@
+@use '../media';
 .footer {
   background: linear-gradient(to right, var(--color-dark-footer) 50%, #2A2A2E 50%);
-  @include mobile {
+  @include media.mobile {
     background: linear-gradient(to bottom, var(--color-dark-footer) 50%, #2A2A2E 50%);
   }
   &__inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-height: 399px;
-    @include tablet {
+    @include media.tablet {
       max-height: 100%;
     }
-    @include mobile {
+    @include media.mobile {
       grid-template-columns: 1fr;
     }
  
@@ -18,11 +19,11 @@
   &__left {
     color: var(--color-light);
     margin-top: 63px;
-    @include tablet {
+    @include media.tablet {
       margin-top: 43px;
       max-height: 359px;
     }
-    @include mobile {
+    @include media.mobile {
       margin-top: 41px;
       max-height: 348px;
     }
@@ -31,7 +32,7 @@
     color: var(--color-light);
     margin-top: 63px;
     margin-left: 127px;
-    @include tablet {
+    @include media.tablet {
       margin-top: 43px;
       margin-left: 40px;
     }
@@ -43,7 +44,7 @@
       margin-bottom: 50px;
     }
 
-    @include mobile {
+    @include media.mobile {
       margin-top: 39px;
       margin-left: 0px;
     }
@@ -51,9 +52,11 @@
       background-color: transparent;
       border: 2px solid var(--color-dark-border);
 
-      @include mobile {
+      @include media.mobile {
         margin-bottom: 20px;
       }
+    }:hover {
+      border: none;
     }
     &-extra{
       &-link{
@@ -85,7 +88,7 @@
     flex-direction: column;
     margin-bottom: 130px;
     white-space: nowrap;
-    @include tablet {
+    @include media.tablet {
       margin-bottom: 0px;
     }
     
@@ -138,7 +141,7 @@
       margin-top: 21px;
       height: 47px;
 
-      @include mobile {
+      @include media.mobile {
         flex-direction: column;
         margin-left: 15px;
       }

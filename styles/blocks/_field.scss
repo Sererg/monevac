@@ -1,3 +1,4 @@
+@use '../media';
 .field {
 
   display: flex;
@@ -14,12 +15,12 @@
     border: 2px solid var(--color-light);
     
 
-    @include hover {
+    @include media.hover {
      border-color:#E6E6E6;
      background-color: var(--color-light);
     }
 
-    @include mobile {
+    @include media.mobile {
       padding-inline: 20px;
     }
 
@@ -37,7 +38,7 @@
       padding-block: 17px;
       resize: none;
 
-      @include mobile {
+      @include media.mobile {
         height: 166px;
       }
     }

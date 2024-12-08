@@ -1,20 +1,22 @@
+@use '../media';
+@use '../mixins';
 .burger-button {
-  @include reset-button;
-  @include square(32px);
+  @include mixins.reset-button;
+  @include mixins.square(32px);
 
   position: relative;
 
-  @include tablet {
-    @include square(23px);
+  @include media.tablet {
+    @include mixins.square(23px);
   }
 
-  @include hover {
+  @include media.hover {
     background-color: var(--color-red);
     border-radius: 3px;
   }
 
   &::before {
-    @include abs-center;
+    @include mixins.abs-center;
 
     content: '';
     width: 100%;
@@ -27,7 +29,7 @@
   }
 
   &::after {
-    @include abs-center;
+    @include mixins.abs-center;
 
     content: '';
     width: 50%;
@@ -36,7 +38,7 @@
     border-radius: 5px;
     box-shadow: 0 12px;
     top: 40%;
-    @include tablet {
+    @include media.tablet {
       box-shadow: 0 8px;
     }
     translate: -100% -50%;
