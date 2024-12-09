@@ -161,20 +161,23 @@
                                 <div class="contact-us__body grid grid--2">
                                     <div class="contact-us__field field">
                                         <input
-                                        class="field__input"
-                                        id="name"
-                                        name="name"
-                                        placeholder="Ваше имя"
+                                            class="field__input"
+                                            id="name"
+                                            name="name"
+                                            placeholder="Ваше имя"
+                                            required
                                         />
                                     </div>
                                     <div class="contact-us__field field">
                                         <input
-                                          class="field__input field__input-tel"
-                                          id="tel"
-                                          name="tel"
-                                          placeholder="Ваш телефон"
+                                            class="field__input field__input-tel"
+                                            id="tel"
+                                            name="tel"
+                                            placeholder="Ваш телефон"
+                                            type="tel"
+                                            required
                                         />
-                                      </div>
+                                    </div>
                                     <div class="contact-us__field-large field">
                                         <textarea
                                             class="field__input field__input--textarea"
@@ -186,13 +189,14 @@
                                     </div>
                                 </div>
                                 <label class="contact-us__checkbox">
-                                    <input type="checkbox"  id="agree" name="agree">
+                                    <input type="checkbox" id="agree" name="agree" required>
                                     <span class="contact-us__checkbox-icon"></span>
-                                   <span style="color: var(--color-gray-text);">Я подтверждаю свое согласие с политикой в отношении</span> обработки персональных данных
+                                    <span style="color: var(--color-gray-text);">Я подтверждаю свое согласие с политикой в отношении</span> обработки персональных данных
                                 </label>
                                 <button
-                                class="contact-us__button button"
-                                type="button"
+                                    class="contact-us__button button"
+                                    id="submit-button"
+                                    type="submit"
                                 >
                                     Задать вопрос
                                 </button>
