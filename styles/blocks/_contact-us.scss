@@ -1,4 +1,16 @@
 @use '../media';
+
+.error-message {
+  color: #BF2738;
+  font-size: 12px;
+  line-height: 18px;
+  padding-inline: 20px;
+}
+
+.invalid {
+  color: #BF2738;
+  background-color: #BF27381F;
+}
 .contact-us {
 
   &__form {

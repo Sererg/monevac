@@ -167,6 +167,7 @@
                                             placeholder="Ваше имя"
                                             required
                                         />
+                                        <div class="error-message" id="name-error"></div>
                                     </div>
                                     <div class="contact-us__field field">
                                         <input
@@ -177,6 +178,7 @@
                                             type="tel"
                                             required
                                         />
+                                        <div class="error-message" id="tel-error"></div>
                                     </div>
                                     <div class="contact-us__field-large field">
                                         <textarea
@@ -186,12 +188,14 @@
                                             placeholder="Ваше сообщение"
                                             required
                                         ></textarea>
+                                        <div class="error-message" id="message-error"></div>
                                     </div>
                                 </div>
                                 <label class="contact-us__checkbox">
                                     <input type="checkbox" id="agree" name="agree" required>
                                     <span class="contact-us__checkbox-icon"></span>
                                     <span style="color: var(--color-gray-text);">Я подтверждаю свое согласие с политикой в отношении</span> обработки персональных данных
+                                    <div class="error-message" id="agree-error"></div>
                                 </label>
                                 <button
                                     class="contact-us__button button"

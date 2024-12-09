@@ -12,6 +12,11 @@ const nameInput = document.querySelector('#name');
 const telInput = document.querySelector('#tel');
 const messageInput = document.querySelector('#message');
 const agreeInput = document.querySelector('#agree');
+const nameError = document.querySelector('#name-error');
+const telError = document.querySelector('#tel-error');
+const messageError = document.querySelector('#message-error');
+const agreeError = document.querySelector('#agree-error');
+const submitButton = document.querySelector('#submit-button');
 
 const phoneRegex = /^\+7 $$\d{3}$$ \d{3}-\d{2}-\d{2}$/;
 
@@ -19,41 +24,63 @@ form.onsubmit = function() {
     return confirm('Вы действительно хотите отправить свой вопрос?');
 };
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
+// Функция для отображения ошибок
+function showError(input, errorElement, message) {
+    input.classList.add('invalid');
+    errorElement.style.display = 'block'; // Показать ошибку
+    errorElement.textContent = message;
+}
+
+// Функция для удаления ошибок
+function removeError(input, errorElement) {
+    input.classList.remove('invalid');
+    errorElement.style.display = 'none'; // Скрыть ошибку
+    errorElement.textContent = '';
+}
+
+// Валидация при клике на кнопку отправки
+submitButton.addEventListener('click', function(event) {
+    event.preventDefault();
     let isValid = true;
 
     // Проверка имени
     if (nameInput.value.trim() === '') {
-        nameInput.classList.add('invalid');
+        showError(nameInput, nameError, 'Является обязательным полем');
         isValid = false;
     } else {
-        nameInput.classList.remove('invalid');
+        removeError(nameInput, nameError);
     }
 
     // Проверка телефона
-    if (!phoneRegex.test(telInput.value)) {
-        telInput.classList.add('invalid');
+    if (telInput.value.trim() === '') {
+        showError(telInput, telError, 'Является обязательным полем');
         isValid = false;
     } else {
-        telInput.classList.remove('invalid');
+        removeError(telInput, telError);
     }
+
+      telInput.addEventListener('input', function() {
+    if (!phoneRegex.test(telInput.value)) {
+        showError(telInput, telError, 'Введите номер телефона в правильном формате');
+    } else {
+        removeError(telInput, telError);
+    }
+});
 
     // Проверка сообщения
     if (messageInput.value.trim() === '') {
-        messageInput.classList.add('invalid');
+        showError(messageInput, messageError, 'Является обязательным полем');
         isValid = false;
     } else {
-        messageInput.classList.remove('invalid');
+        removeError(messageInput, messageError);
     }
 
     // Проверка согласия
     if (!agreeInput.checked) {
-        alert("Пожалуйста, подтвердите свое согласие на обработку персональных данных.");
-        agreeInput.classList.add('invalid');
+        showError(agreeInput, agreeError, 'Является обязательным полем');
         isValid = false;
     } else {
-        agreeInput.classList.remove('invalid');
+        removeError(agreeInput, agreeError);
     }
 
     if (isValid) {
