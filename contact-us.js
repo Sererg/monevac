@@ -77,15 +77,13 @@ submitButton.addEventListener('click', function(event) {
 
     // Проверка согласия
     if (!agreeInput.checked) {
-        showError(agreeInput, agreeError, 'Является обязательным полем');
+        showError(agreeInput, agreeError, 'Является обязательным пунктом');
         isValid = false;
     } else {
         removeError(agreeInput, agreeError);
     }
 
     if (isValid) {
-        // Отправка формы
         console.log('Форма валидна и может быть отправлена');
-        // Здесь можно добавить код для отправки формы на сервер
     }
 });

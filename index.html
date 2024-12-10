@@ -88,18 +88,24 @@
             </button>
         </div>
     </header>
-
+ 
     <main class="content">
         <section class="section">
             <div class="section__header">
-                <div class="section__header-menu">
+                <div class="section__header-menu" itemscope itemtype="https://schema.org/BreadcrumbList">
                     <ul class="section__header-list">
-                        <li class="section__header-item">
-                            <a class="section__header-link" href="/">Главная</a>
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="/">
+                                <span itemprop="name">Главная</span>
+                            </a>
+                            <meta itemprop="position" content="1"/>
                         </li>
                         <a>·</a>
-                        <li class="section__header-item">
-                            <a class="section__header-link" href="/">Контакты</a>
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="/">
+                                <span itemprop="name">Контакты</span>
+                            </a>
+                            <meta itemprop="position" content="2"/>
                         </li>
                     </ul>
                 </div>
@@ -110,53 +116,57 @@
                     
             </div>
             <div class="section__body container">
-                <div  class="hero">
-                        <div class="hero__body">
-                            <div class="hero__title">
-                                <h2 class="hero__title-number">8 (903) 467 98 51</h2>
-                                <p class="hero__title-mail">info@monevac.ru</p>
-                            </div>
-                            <div class="hero__description">
-                                <h2 class="visually-hidden">Реквизиты организации</h2>
-                                <div class="hero__description-header">
-                                  <p>
+                <div class="hero" itemscope itemtype="https://schema.org/LocalBusiness">
+                    <div class="hero__body">
+                        <div class="hero__title" itemprop="contactPoint">
+                            <h2 class="hero__title-number" itemprop="telephone">8 (903) 467 98 51</h2>
+                            <p class="hero__title-mail" itemprop="email">info@monevac.ru</p>
+                        </div>
+                        <div class="hero__description">
+                            <h2 class="visually-hidden">Реквизиты организации</h2>
+                            <div class="hero__description-header">
+                                <p>
                                     Полное наименование:<br>
                                     Общество с ограниченной ответственностью «МОНЕВАК»<br>
                                     Сокращенное наименование: ООО «МОНЕВАК»<br>
-                                  </p>  
-                                </div>
-                                <ul class="hero__description-list">
-                                    <li class="hero__description-item">
-                                        <p>
-                                            ИНН: 3448050610<br>
-                                            КПП: 344801001<br>
-                                            ОКПО: 67354285<br>
-                                            ОКАТО: 18401000000<br>
-                                            ОГРН: 1103461002480<br>
-                                            Код по ОКВЭД: 51.70<br>
-                                        </p>
-                                    </li>
-                                    <li class="hero__description-item">
-                                        <p>
-                                            Банк: Филиала «Ростовский» ОАО «Альфа-Банк» г Ростов на Дону<br>
-                                            БИК: 046015207<br>
-                                            к/с: 30101810500000000207<br>
-                                            р/с: 40702810926090000003<br>
-                                        </p>
-                                    </li>
-                                    <li class="hero__description-item">
-                                        <p>
-                                            Юридический адрес: 400080, Волгоградская обл. г. Волгоград<br>                              
-                                            ул. Командира Рудь,14А, офис 13<br> 
-                                            Почтовый адрес: 400080, Волгоградская обл. г. Волгоград<br>                                     
-                                            ул. Командира Рудь, 14А, офис 13<br> 
-                                        </p>
-                                    </li>
-                                </ul>
+                                </p>
                             </div>
+                            <ul class="hero__description-list">
+                                <li class="hero__description-item">
+                                    <p>
+                                        ИНН: 3448050610<br>
+                                        КПП: 344801001<br>
+                                        ОКПО: 67354285<br>
+                                        ОКАТО: 18401000000<br>
+                                        ОГРН: 1103461002480<br>
+                                        Код по ОКВЭД: 51.70<br>
+                                    </p>
+                                </li>
+                                <li class="hero__description-item">
+                                    <p>
+                                        Банк: Филиала «Ростовский» ОАО «Альфа-Банк» г Ростов на Дону<br>
+                                        БИК: 046015207<br>
+                                        к/с: 30101810500000000207<br>
+                                        р/с: 40702810926090000003<br>
+                                    </p>
+                                </li>
+                                <li class="hero__description-item" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                    <p>
+                                        Юридический адрес: 400080, Волгоградская обл. г. Волгоград<br>
+                                        ул. Командира Рудь,14А, офис 13<br>
+                                        Почтовый адрес: 400080, Волгоградская обл. г. Волгоград<br>
+                                        ул. Командира Рудь, 14А, офис 13<br>
+                                    </p>
+                                    <meta itemprop="streetAddress" content="ул. Командира Рудь,14А, офис 13"/>
+                                    <meta itemprop="addressLocality" content="Волгоград"/>
+                                    <meta itemprop="addressRegion" content="Волгоградская обл."/>
+                                    <meta itemprop="postalCode" content="400080"/>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
                         <div class="contact-us">
-                            <form class="contact-us__form">
+                            <form class="contact-us__form" itemscope itemtype="https://schema.org/ContactPoint">
                                 <h2 class="contact-us__form-question">Остались вопросы?</h2>
                                 <div class="contact-us__body grid grid--2">
                                     <div class="contact-us__field field">
@@ -174,9 +184,10 @@
                                             class="field__input field__input-tel"
                                             id="tel"
                                             name="tel"
-                                            placeholder="Ваш телефон"
+                                            placeholder="+7 (___) ___-__-__"
                                             type="tel"
                                             required
+                                            itemprop="telephone"
                                         />
                                         <div class="error-message" id="tel-error"></div>
                                     </div>
@@ -216,136 +227,166 @@
                 <div class="location">
                     <ul class="location__list grid grid--4">
                         <li class="location__item">
-                            <article class="location-card">
-                                <h4 class="location-card__title">МОСКВА</h4>
+                            <article class="location-card" itemscope itemtype="https://schema.org/LocalBusiness">
+                                <h4 class="location-card__title" itemprop="name">МОСКВА</h4>
                                 <div class="location-card__body">
                                     <div class="location-card__body-phone">
                                         <span>
-                                            <p>
+                                            <p itemprop="telephone">
                                                 +7 (499) 136-17-18<br>
                                                 +7 (903) 467-98-51
                                             </p>
                                         </span>
                                     </div>
-                                    <span class="location-card__body-address">115114, ул. Дербеневская, д. 1, стр. 1, подъезд 44, офис 6 (станция метро "Павелецкая")</span>
+                                    <span class="location-card__body-address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                        <span itemprop="streetAddress">115114, ул. Дербеневская, д. 1, стр. 1, подъезд 44</span>,
+                                        <span itemprop="addressLocality">Москва</span>,
+                                        (станция метро "Павелецкая")
+                                    </span>
                                     <a href="/" class="location-card__body-link">Проложить маршрут</a>
                                 </div>
-                                <span class="location-card__body-footer">Режим работы: c 10:00 до 18:00</span>
+                                <span class="location-card__body-footer" itemprop="openingHours" content="Mo-Sa 10:00-18:00">Режим работы: c 10:00 до 18:00</span>
                             </article>
                         </li>
                         <li class="location__item">
-                            <article class="location-card">
-                                <h4 class="location-card__title">Волгоград</h4>
+                            <article class="location-card" itemscope itemtype="https://schema.org/LocalBusiness">
+                                <h4 class="location-card__title" itemprop="name">Волгоград</h4>
                                 <div class="location-card__body">
                                     <div class="location-card__body-phone">
                                         <span>
-                                            <p>
+                                            <p itemprop="telephone">
                                                 +7 (8442) 65-08-88<br>
                                                 +7 (8442) 65-08-80  
                                             </p>
                                         </span>
                                     </div>
-                                    <span class="location-card__body-address">400080, ул. Командира Рудь, 14А</span>
+                                    <span class="location-card__body-address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                        <span itemprop="streetAddress">400080, ул. Командира Рудь, 14А</span>,
+                                        <span itemprop="addressLocality">Волгоград</span>
+                                    </span>
                                     <a href="/" class="location-card__body-link">Проложить маршрут</a>
                                 </div>
-                                <span class="location-card__body-footer">Режим работы: c 08:00 до 17:00</span>
+                                <span class="location-card__body-footer" itemprop="openingHours" content="Mo-Fr 08:00-17:00">Режим работы: c 08:00 до 17:00</span>
                             </article>
                         </li>
                         <li class="location__item">
-                            <article class="location-card">
-                                <h4 class="location-card__title">КРАСНОДАР</h4>
+                            <article class="location-card" itemscope itemtype="https://schema.org/LocalBusiness">
+                                <h4 class="location-card__title" itemprop="name">КРАСНОДАР</h4>
                                 <div class="location-card__body">
                                     <div class="location-card__body-phone">
                                         <span>
-                                            <p>
+                                            <p itemprop="telephone">
                                                 +7 (861) 292-71-88<br>
                                                 +7 (903) 467-98-51
                                             </p>
                                         </span>
                                     </div>
-                                    <span class="location-card__body-address">350015, ул. Митрофана Седина, 176</span>
+                                    <span class="location-card__body-address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                        <span itemprop="postalCode">350015</span>,
+                                        <span itemprop="streetAddress"> ул. Митрофана Седина, 176</span>,
+                                        <span itemprop="addressLocality">Краснодар</span>
+                                    </span>
                                     <a href="/" class="location-card__body-link">Проложить маршрут</a>
                                 </div>
-                                <span class="location-card__body-footer">Режим работы: c 08:00 до 17:00</span>
+                                <span class="location-card__body-footer" itemprop="openingHours" content="Mo-Fr 08:00-17:00">Режим работы: c 08:00 до 17:00</span>
                             </article>
                         </li>
                         <li class="location__item">
-                            <article class="location-card">
-                                <h4 class="location-card__title">Саратов</h4>
+                            <article class="location-card" itemscope itemtype="https://schema.org/LocalBusiness">
+                                <h4 class="location-card__title" itemprop="name">Саратов</h4>
                                 <div class="location-card__body">
                                     <div class="location-card__body-phone">
                                         <span>
-                                            <p>
+                                            <p itemprop="telephone">
                                                 +7 (927) 626-00-50<br>
                                                 +7 (903) 467-98-51
                                             </p>
                                         </span>
                                     </div>
-                                    <span class="location-card__body-address">410080, пр-т Строителей, 1</span>
+                                    <span class="location-card__body-address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                        <span itemprop="postalCode">410080</span>,
+                                        <span itemprop="streetAddress"> пр-т Строителей, 1</span>,
+                                        <span itemprop="addressLocality">Саратов</span>
+                                    </span>
                                     <a href="/" class="location-card__body-link">Проложить маршрут</a>
                                 </div>
-                                <span class="location-card__body-footer">Режим работы: c 10:00 до 18:00</span>
+                                <span class="location-card__body-footer" itemprop="openingHours" content="Mo-Fr 10:00-18:00">Режим работы: c 10:00 до 18:00</span>
                             </article>
                         </li>
                         <li class="location__item">
-                            <article class="location-card">
-                                <h4 class="location-card__title">воронеж</h4>
+                            <article class="location-card" itemscope itemtype="https://schema.org/LocalBusiness">
+                                <h4 class="location-card__title" itemprop="name">Воронеж</h4>
                                 <div class="location-card__body">
                                     <div class="location-card__body-phone">
                                         <span>
-                                            <p>
+                                            <p itemprop="telephone">
                                                 +7 (473) 229-63-78<br>
                                                 +7 (903) 467-98-51
                                             </p>
                                         </span>
                                     </div>
-                                    <span class="location-card__body-address">394030, ул. Комиссаржевской, 10</span>
+                                    <span class="location-card__body-address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                        <span itemprop="postalCode">394030</span>,
+                                        <span itemprop="streetAddress"> ул. Комиссаржевской, 10</span>,
+                                        <span itemprop="addressLocality">Воронеж</span>
+                                    </span>
                                     <a href="/" class="location-card__body-link">Проложить маршрут</a>
                                 </div>
-                                <span class="location-card__body-footer">Режим работы: c 10:00 до 18:00</span>
+                                <span class="location-card__body-footer" itemprop="openingHours" content="Mo-Fr 10:00-18:00">Режим работы: c 10:00 до 18:00</span>
                             </article>
                         </li>
                         <li class="location__item">
-                            <article class="location-card">
-                                <h4 class="location-card__title">ЕРЕВАН</h4>
+                            <article class="location-card" itemscope itemtype="https://schema.org/LocalBusiness">
+                                <h4 class="location-card__title" itemprop="name">ЕРЕВАН</h4>
                                 <div class="location-card__body">
                                     <div class="location-card__body-phone">
                                         <span>
-                                            <p>
+                                            <p itemprop="telephone">
                                                 +374 91 21 90 69<br>
                                                 +374 60 50 90 69
                                             </p>
                                         </span>
                                     </div>
-                                    <span class="location-card__body-address">Район Аван 4, дом 2</span>
+                                    <span class="location-card__body-address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                        <span itemprop="streetAddress">Район Аван 4, дом 2</span>,
+                                        <span itemprop="addressLocality">Ереван</span>
+                                    </span>
                                     <a href="/" class="location-card__body-link">Проложить маршрут</a>
                                 </div>
-                                <span class="location-card__body-footer">Режим работы: c 10:00 до 18:00</span>
+                                <span class="location-card__body-footer" itemprop="openingHours" content="Mo-Fr 10:00-18:00">Режим работы: c 10:00 до 18:00</span>
                             </article>
                         </li>
                         <li class="location__item location__item-large">
-                            <article class="location-card location-card__large">
-                                <h4 class="location-card__title">НОВОСИБИРСК</h4>
+                            <article class="location-card location-card__large" itemscope itemtype="https://schema.org/LocalBusiness">
+                                <h4 class="location-card__title" itemprop="name">НОВОСИБИРСК</h4>
                                 <div class="location-card__body">
                                     <div class="location-card__body-phone">
                                         <span>
-                                            <p>
-                                                +7 (383) 20-62-461;<br> +7 (383) 20-62-711<br> +7 (903) 467-98-51<br>
-                                                Факс: +7 (383) 20-62-209; <br> +7 (383) 20-62-210
+                                            <p itemprop="telephone">
+                                                +7 (383) 20-62-461;<br>
+                                                +7 (383) 20-62-711<br>
+                                                +7 (903) 467-98-51<br>
+                                                Факс: +7 (383) 20-62-209; <br>
+                                                +7 (383) 20-62-210
                                             </p>
                                         </span>
                                     </div>
-                                    <span class="location-card__body-address">630039, ул. Никитина 116, к.3</span>
+                                    <span class="location-card__body-address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                        <span itemprop="postalCode">630039</span>,
+                                        <span itemprop="streetAddress"> ул. Никитина 116, к.3</span>,
+                                        <span itemprop="addressLocality">Новосибирск</span>
+                                        
+                                    </span>
                                     <a href="/" class="location-card__body-link">Проложить маршрут</a>
                                 </div>
-                                <span class="location-card__body-footer">Режим работы: c 10:00 до 18:00</span>
+                                <span class="location-card__body-footer" itemprop="openingHours" content="Mo-Sa 10:00-18:00">Режим работы: c 10:00 до 18:00</span>
                             </article>
                         </li>
                     </ul>
                 </div>
         </section>
     </main>
-
+ 
     <footer class="footer">
         <div class="footer__inner container">
             <div class="footer__left">
@@ -416,18 +457,21 @@
                         </ul>
                     </nav>
             </div>
-            <div class="footer__right">
+            <div class="footer__right" itemscope itemtype="https://schema.org/LocalBusiness">
                 <div class="footer__right-body grid grid--2">
-                    <div class="footer__title">
-                        <h3 class="footer__title-number">
+                    <div class="footer__title" itemprop="contactPoint">
+                        <h3 class="footer__title-number" itemprop="telephone">
                             +7 (499) 136-17-18 <br>
                             +7 (903) 467-98-51 
                         </h3>
-                        <p class="footer__title-mail">info@monevac.ru</p>
+                        <p class="footer__title-mail" itemprop="email">info@monevac.ru</p>
                     </div>
                     <button class="footer__right-button button">Обратный звонок</button>
                 </div>
-                <span class="footer_right-address">Москва ул. Дербеневская, д. 1, стр. 1, подъезд 44, офис 6 (станция метро "Павелецкая")</span>
+                <span class="footer_right-address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                    <span itemprop="streetAddress">ул. Дербеневская, д. 1, стр. 1, подъезд 44</span>,
+                    <span itemprop="addressLocality">Москва</span>,(станция метро "Павелецкая")
+                </span>
             </div>
         </div>
         <div class="footer__extra">
@@ -442,7 +486,7 @@
         </div>
         
     </footer>
-
+ 
     <dialog class="overlay" id="overlay">
         <form class="overlay__close-button-wrapper" method="dialog">
             <button class="overlay__close-button cross-button"
